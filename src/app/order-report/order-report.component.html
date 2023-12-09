@@ -1,0 +1,56 @@
+<mat-toolbar id="header" color="primary">
+  <h1>User Order Details</h1>
+  <nav>
+      <mat-icon routerLink="/">home</mat-icon>
+  </nav>
+</mat-toolbar>
+<section id="request-section">
+  <table mat-table [dataSource]="orderRequests" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Sr No </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="OrderDate">
+        <th mat-header-cell *matHeaderCellDef> Order Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.OrderDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="customerName">
+        <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Price">
+        <th mat-header-cell *matHeaderCellDef>Order Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.Price}} </td>
+      </ng-container>
+    
+      <!-- Email Column -->
+      <ng-container matColumnDef="customerEmail">
+        <th mat-header-cell *matHeaderCellDef> E-mail </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerEmail}} </td>
+      </ng-container>
+    
+      <!-- Phone Column -->
+      <ng-container matColumnDef="customerPhone">
+        <th mat-header-cell *matHeaderCellDef> Mobile No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerPhone}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Quantity">
+        <th mat-header-cell *matHeaderCellDef>Quantity </th>
+        <td mat-cell *matCellDef="let element"> {{element.Quantity}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="caption">
+        <th mat-header-cell *matHeaderCellDef> Order Item name</th>
+        <td mat-cell *matCellDef="let element"> {{element.caption}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</section>

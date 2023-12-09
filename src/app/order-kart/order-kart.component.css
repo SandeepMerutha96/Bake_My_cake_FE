@@ -1,0 +1,65 @@
+#image-viewer {
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    margin: 30px auto;
+    width: 30%;
+    border: rgb(228, 96, 25) solid 3em;
+    border-radius: 2em;
+}
+
+#image-viewer img {
+    height: 200px;
+    width: 100%;
+    
+}
+
+h5,
+h6 {
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    color: rgb(7, 7, 7);
+}
+#tour-detail {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding : 0 10px;
+}
+
+#tour-detail img {
+    width: 90%;
+}
+#tour-detail p {
+    width: 90%;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+#tour-request {
+    width: 35%;
+    display: flex;
+    padding-left: 10px;
+    flex-direction: column;
+}
+
+#per-tour {
+    font-size: small;
+}
+.danger{
+    font-size: x-small;
+    font-weight: lighter;
+    text-decoration: none;
+    color: red;
+}
+.card-body{
+    margin-right: 2%;
+    border: 3em solid rgb(228, 96, 25) ;
+    float: right;
+    padding: none;
+}
+.yum{
+    margin-left: 30%;
+}

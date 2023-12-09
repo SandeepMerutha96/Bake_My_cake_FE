@@ -1,0 +1,74 @@
+.card{
+  display:inline-flexbox;
+  width: 300px;
+  height: auto;
+  border: 2px solid rgb(230, 105, 22);
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 60px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+.container{
+  display:flex;
+  flex-wrap: wrap;
+}
+.signin-button{
+border-radius: 5px;
+border: 2px solid red;
+cursor:pointer;
+color: white;
+padding: 5px;
+}
+.signin-button:hover{
+box-shadow: 0 1px 1px 1px rgb(252, 0, 0);
+}
+  .footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(230, 105, 22);
+    color: white;
+    
+ }
+ .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(72, 25, 202);
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(37, 29, 202);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

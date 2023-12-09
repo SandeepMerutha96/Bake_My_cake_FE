@@ -1,0 +1,15 @@
+div{
+    background-color: rgb(230, 105, 22);
+    border-bottom: 4px solid rgb(218, 235, 68);
+    padding: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+h2 {
+    /* margin: 0px; */
+    font-family: 'Pacifico', cursive;
+    font-weight: 60;
+    color: rgb(244, 244, 232);
+}
+

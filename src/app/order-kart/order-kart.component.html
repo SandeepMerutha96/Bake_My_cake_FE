@@ -1,0 +1,78 @@
+
+<div id="image-viewer">
+    <mat-card  *ngIf = "image" >
+        <img [src]="image.url" alt="">
+        <h5>{{image.caption}}  </h5>
+        <h6>Price:Per Unit  {{image.Price}}</h6>
+        <h6>Item Category: {{image.category}}</h6>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="card-body">
+    <form class="form" #orderForm="ngForm" (ngSubmit)="orderForm.form.valid && makeRequest()" novalidate>
+        
+        <mat-form-field fill="legacy">
+            <label class="form-label">Date of Order</label>
+<input type="date" name="OrderDate" #OrderDate="ngModel" required  [(ngModel)]="orderRequest.OrderDate" placeholder="Provide date">
+
+</mat-form-field>
+    <mat-form-field fill="legacy">
+        <label class="form-label">Customer name</label>
+        <input  type="text" name="customerName" #customerName="ngModel" required minlength="3" [(ngModel)]="orderRequest.customerName" placeholder="Provide your name">
+        <span class="danger" *ngIf="(customerName.touched || orderForm.submitted) && customerName.errors?.['required']">
+             name is required   </span>   
+            <span class="danger" *ngIf="customerName.errors?.['minlength']">
+            First Name Minimum Length is {{customerName.errors?.['minlength']?.requiredLength}}
+            </span>
+     </mat-form-field>
+
+     <div class="col-5 mb-3">
+     <mat-form-field fill="legacy">
+        <label class="form-label">Mobile No.</label>
+        <input type="text" pattern="^[7-9][0-9]{9}$"  class="form-control" maxlength="10"  name="customerPhone" #customerPhone="ngModel" [(ngModel)]="orderRequest.customerPhone" required placeholder="Enter Mobile No">
+        <span class="danger" *ngIf="(customerPhone.touched || orderForm.submitted) && customerPhone.errors?.['required']">
+            Please enter Mobile No. 
+        </span>
+        <span  class="danger" *ngIf = "customerPhone.errors?.['pattern'] && customerPhone.touched">
+            Mobile should start with only (7,8,9)
+         </span>
+         <span class="danger" *ngIf="customerPhone.errors?.['maxlength']">
+            Please enter only 10  digit mobile no  {{customerPhone.errors?.['maxlength']?.requiredLength}}
+            </span>
+     </mat-form-field>
+     </div>
+
+     <div class="col-5 mb-3">
+     <mat-form-field fill="legacy">
+        <label class="form-label">Enter Quantity</label>
+        <input class="form-control" type="number" matInput name="Quantity" #Quantity="ngModel" [(ngModel)]="orderRequest.Quantity" required  placeholder="Enter Quantity">
+        <span class="danger" *ngIf="(Quantity.touched || orderForm.submitted) && Quantity.errors?.['required']">
+     Please enter quantity of Item !
+ </span>
+     </mat-form-field>
+    </div>
+
+    <mat-form-field fill="legacy">
+    <label class="form-label">Customer Email</label>
+     <input type="text" class="form-control" [(ngModel)]="orderRequest.customerEmail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="customerEmail" #customerEmail="ngModel" required  placeholder="Enter Email">
+ <span class="danger"
+     *ngIf="(customerEmail.touched || orderForm.submitted) && customerEmail.errors?.['required']">
+     Email is required
+ </span>
+ <span  class="danger" *ngIf = "customerEmail.errors?.['pattern'] && customerEmail.touched">
+    The email id doesn't seem right
+ </span>
+</mat-form-field>
+ <div>
+
+    <button mat-flat-button color="primary" [disabled]="orderForm.invalid" >Order Now</button>
+</div>
+</form>
+</div>
+
+
+
+
+

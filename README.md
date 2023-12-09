@@ -1,10 +1,27 @@
-# Bake_My_cake_FE
-# Bake_My_Cake_store
-Bake my cake is a Single page application developed using the Angular 16.0 Framework with JSON Server.
-Objective:  Main purpose of this web-app to allow users to Order Any choice of Cake, Brownies, Choclates and related item .
+# BakemyCake
 
-Process: From User end
-User selecte any item by clicking on the AddToCart Button then Page will send the user to Add personal detailsin Provided form and Quantity of items.
-As the user Hit the Order Now Button then order will take place and confirmed by the message "Your Order Placed Succesfully" .
-if user wants to leave page without filling form of order then user will be restricted By canDeactivateGuardService and will recieve a confimation message for leaving page "Are You sure wants to leave".
-There are few feature like for Authentication of Admin to access the Database a login component for only particular user id data can be accessed for security.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,55 @@
+<div style="background-color: white;">
+<app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+<div class="container">
+    <mat-card class="card" *ngFor="let image of imageList">
+    <mat-card-header class="header">
+        <mat-card-title>{{image?.caption}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <img mat-card-image [src]="image.url" height="200" width="250" style="border-radius: 15px;">
+    </mat-card-content>
+    <mat-card-footer>
+        {{image?.category}}<br>
+       
+        <pre>
+  Price: {{image?.Price}}  
+
+   Rating : {{image?.ratings}} <img src="../../assets/rating.jpg">
+   <div class="tooltip"><a routerLink="/orderKart/{{image.id}}"><mat-icon  class="cart-icon" color="primary" matTooltip="add to cart">shopping_cart</mat-icon></a>
+    <span class="tooltiptext">Add to cart</span>
+</div> 
+</pre>
+    </mat-card-footer>
+    </mat-card>
+</div>
+<!-- <div style="display:flex;">
+    <div>
+        <mat-card *ngFor="let image of imageList">
+            <a>
+                <img mat-card-image [src]="image.url">
+                <mat-card-content>
+                    <mat-card-subtitle>
+                        <span>{{image.caption}} | {{image.Price}} | {{image.ratings}}</span> 
+ <a routerLink="/orderKart/{{image.id}}"><mat-icon  class="cart-icon" color="primary" matTooltip="add to cart">shopping_cart</mat-icon></a>
+                    </mat-card-subtitle>
+                </mat-card-content>
+            </a>
+        </mat-card>
+    </div>
+</div>  
+</div> -->
+
+
+<div class="footer">
+    <p style="display: inline-flex;"><li><a routerLink="/home">Home</a></li>
+        <li><a href="javascript:void(0);">About</a></li>
+        <li><a href="javascript:void(0);">Platform</a></li>
+        <li><a href="javascript:void(0);">Use Cases</a></li>
+        <li><a href="javascript:void(0);">Careers</a></li>
+        <li><a href="javascript:void(0);">Contact</a></li>
+    </p>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+  </div>
+ 

@@ -1,0 +1,12 @@
+
+<mat-toolbar id="header" color="primary">
+    <h1>Bake My Cake </h1>
+</mat-toolbar>
+<div id="login-form">
+    <h3>If you are a Admin, enter your admin Code</h3>
+    <mat-form-field fill ="legacy">
+        <mat-label class="alp">Enter Admin Code</mat-label>
+        <input matInput  type="password" name="adminCode" [(ngModel)]="adminCode" placeholder="Admin seurity Code" required>​
+    </mat-form-field>
+    <button mat-button color="primary" (click)="validateAdminCode()">Submit</button>
+</div>
